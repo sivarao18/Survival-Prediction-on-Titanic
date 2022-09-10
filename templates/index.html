@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Survival Prediction on Titanic
+        </title>
+    </head>
+    <body>
+        <form action="/predict" method="POST">
+            <label>Enter Passenger Id</label><lable>(0-891)</lable>
+            <input type="text" name="Pid" /><br/>
+            <label>Enter Passenger class</label><lable>(1-3)</lable>
+            <input type="text" name="pclass" /><br/>
+            <label>Enter Gender:</label><label>(0:female,1:male)</label>
+            <input type="text" name="Sex" /><br/>
+            <label>Enter Age:</label><label>(0-80)</label>
+            <input type="text" name="Age" /><br/>
+            <label>Enter no.of siblings and spouses on board:</label><label>(if any enter a number otherwise 0)</label>
+            <input type="text" name="Sibsp" /><br/>
+            <label>Enter no of parents and children on board:</label><label>(if any enter a number otherwise 0)</label>
+            <input type="text" name="Parch" /><br/>
+            <label>Enter Price of ticket:</label><label>0-500</label>
+            <input type="text" name="Fare" /><br/>
+            <label>Enter where you embarked:</label><label>(0:Cherbourg,1:Queenstown,2:Southampton</label>
+            <input type="text" name="Embarked" /><br/>
+            <input type="submit" />
+            {{result}}
+        </form>
+    </body>
+</html>
