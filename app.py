@@ -21,7 +21,10 @@ def collectData():
     Embarked=float(request.form['Embarked'])
     print(Pid,pclass,Sex,Age,Sibsp,Parch,Fare,Embarked)
     result=model.predict([[Pid,pclass,Sex,Age,Sibsp,Parch,Fare,Embarked]])
-    return(str(result[0]))
-
+    if ((str(result[0]==0))) :
+        return "Death"
+    else:
+        return "Survived"
+    
 if __name__=="__main__":
     app.run(debug=True)
